@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .grandParent,.parent,.child{
+        width: 200px;
+        border:2px solid red;
+      }
+      .grandParent{
+        height: 200px;
+      }
+      .parent{
+        height: 100px;
+      }
+      .child{
+        height: 50px;
+     
+      }
+      
+    </style>
+  </head>
+
+<body>
+  <div class="grandParent" id="grandParent">
+    <div class="parent" id="parent">
+      <div class="child" id="child"><button>clickInfo</button></div>
+    </div>
+  </div>
+  <button>add</button>
+  <script src="./app.js"> </script>
+</body>
+</html>
+  <!--   <body>
+    <button id="orange">Orange</button>
+    <button id="green">Green</button>
+    <script>
+      function Outer(color) {
+        return function inner() {
+          return (document.body.style.backgroundColor = `${color}`);
+        };
+      }
+   console.log( Outer("red"))
+      document.getElementById("orange").onclick = Outer("orange");
+      document.getElementById("green").onclick = Outer("green");
+    </script>
+    <script>
+      function Outerfun() {
+        let laxicalScope = "hey i am laxicalScope";
+        return function Innerfun(){
+            return laxicalScope
+        }
+      }
+      let accesLaxical = Outerfun()
+      console.log(accesLaxical())
+    </script>
+  </body> -->
+  <!--   <body>
+    <button id="orange">orange</button>
+    <button id="green">green</button>
+    <script>
+      function changColor(color) {
+        let data = color;
+        return function inner() {
+          return (document.body.style.backgroundColor = `${data}`);
+        };
+      }
+      document.getElementById("orange").onclick = changColor("orange");
+      document.getElementById("green").onclick = changColor("green");
+    </script>
+  </body> -->
